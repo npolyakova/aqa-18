@@ -8,7 +8,7 @@ public class BaseTest {
 
     static ChromeDriver driver;
 
-    String baseUrl = "https://demo.beseller.by";
+    String baseUrl;
 
     WebDriverWait wait;
 
