@@ -1,18 +1,20 @@
+package product.ru;
+
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BaseTest {
+public abstract class GeneralBaseTest {
 
-    static ChromeDriver driver;
+    public static ChromeDriver driver;
 
-    String baseUrl;
+    public String baseUrl;
 
-    WebDriverWait wait;
+    public WebDriverWait wait;
 
-    Faker faker = new Faker();
+    public Faker faker = new Faker();
 
     @BeforeAll
     public static void setProperty() {
@@ -23,4 +25,5 @@ public class BaseTest {
     public void closeAfterEach() {
         driver.close();
     }
+
 }
